@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Providers from './providers/providers';
 import './globals.css';
-import Header from './components/Header';
+import Header from '../shared/components/Header';
 import { Inter } from 'next/font/google';
 
 export const metadata: Metadata = {
@@ -22,11 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} min-h-screen bg-neutral-950 text-neutral-100 antialiased`}
+        className={`${inter.className} min-h-screen bg-slate-900 text-primaryText antialiased`}
       >
         <Providers>
           <Header />
-          <main className=" mx-auto max-w-7xl px-4 py-6">{children}</main>
+          <main className=" mx-auto px-12 py-6">{children}</main>
         </Providers>
       </body>
     </html>

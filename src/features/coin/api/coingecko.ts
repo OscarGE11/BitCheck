@@ -17,8 +17,15 @@ export async function fetchCoins() {
     params: {
       per_page: 20,
       page: 1,
+      vs_currency: 'usd',
     },
   });
+
+  return response.data;
+}
+
+export async function fetchCoin(id: string) {
+  const response = await coinGeckoApi.get(`/coins/${id}`);
 
   return response.data;
 }
