@@ -7,7 +7,7 @@ interface CoinListProps {
 
 export default function CoinList({ coins }: CoinListProps) {
   return (
-    <div className="flex flex-col gap-5">
+    <div className="grid grid-cols-2 gap-4">
       {coins.map((coin) => (
         <CoinCard key={coin.id} coin={coin} />
       ))}

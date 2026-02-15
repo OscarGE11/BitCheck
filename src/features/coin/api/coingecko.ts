@@ -15,9 +15,12 @@ const coinGeckoApi = axios.create({
 export async function fetchCoins() {
   const response = await coinGeckoApi.get('/coins/markets', {
     params: {
+      vs_currency: 'usd',
+      order: 'market_cap_desc',
       per_page: 20,
       page: 1,
-      vs_currency: 'usd',
+      sparkline: false,
+      locale: 'en',
     },
   });
 

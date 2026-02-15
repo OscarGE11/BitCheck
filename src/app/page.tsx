@@ -2,6 +2,8 @@
 import Loader from '../shared/components/Loader';
 import useCoins from '../features/coin/hooks/useCoins';
 import CoinList from '../features/coin/components/CoinList';
+import Card from '@/shared/components/Card';
+import { Flame } from 'lucide-react';
 
 export default function Home() {
   const { data: coins, isError, isPending } = useCoins();
@@ -15,8 +17,17 @@ export default function Home() {
   if (!coins) return null;
 
   return (
-    <div>
-      <CoinList coins={coins} />
+    <div className="px-24 flex w-full gap-12 ">
+      <Card className="w-1/2"></Card>
+      <div className="w-1/2">
+        <div className="text-center flex justify-center text-2xl ">
+          <span>TOP 20 TRENDY</span>{' '}
+          <Flame className=" text-orange-500" size={28} />
+        </div>
+        <div className="pt-4">
+          <CoinList coins={coins} />
+        </div>
+      </div>
     </div>
   );
 }
