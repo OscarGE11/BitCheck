@@ -82,3 +82,14 @@ export interface CoinDetails {
 
   last_updated: string;
 }
+
+export interface RawCoinMarketChartData {
+  prices: number[][];
+  market_caps: number[][];
+  total_volumes: number[][];
+}
+
+export interface FlatCoinMarketChartData {
+  date: number;
+  price: number;
+}

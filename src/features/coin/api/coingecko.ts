@@ -32,3 +32,14 @@ export async function fetchCoin(id: string) {
 
   return response.data;
 }
+
+export async function fetchCoinMarketChart(id: string) {
+  const response = await coinGeckoApi.get(`/coins/${id}/market_chart`, {
+    params: {
+      vs_currency: 'usd',
+      days: 7,
+    },
+  });
+
+  return response.data;
+}

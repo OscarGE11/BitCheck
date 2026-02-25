@@ -21,7 +21,6 @@ export default function PriceChange({ value, className = '' }: Props) {
       ) : (
         <ArrowDown size={14} strokeWidth={3} />
       )}
-      <span className="text-white">)</span>
     </div>
   );
 }
