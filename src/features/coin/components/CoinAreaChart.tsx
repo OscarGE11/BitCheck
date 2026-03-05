@@ -8,9 +8,11 @@ import {
 } from 'recharts';
 import type { FlatCoinMarketChartData } from '../models/Coin';
 import { formatPrice } from '../utils/marketDataFormats';
+import { Heading1, LucideHeading1 } from 'lucide-react';
 interface CoinAreaChartProps {
   flatData: FlatCoinMarketChartData[];
 }
+
 export default function CoinAreaChart({ flatData }: CoinAreaChartProps) {
   return (
     <div style={{ width: '100%', height: 400 }}>
